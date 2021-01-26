@@ -13,6 +13,10 @@ namespace WebApplication2.Controllers
         {
             return "Hello World Application using ASP.NET MVC 4";
         }
+        public String About()
+        {
+            return "This is our About us Page";
+        }
 
     }
 }

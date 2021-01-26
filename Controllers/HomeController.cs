@@ -9,9 +9,9 @@ namespace WebApplication2.Controllers
     public class HomeController : Controller
     {
 
-        public String Index()
+        public ActionResult Index()
         {
-            return "Hello World Application using ASP.NET MVC 4";
+            return View();
         }
         public String About()
         {

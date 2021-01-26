@@ -2,38 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title - Code Express</title>
+    <title>@ViewBag.Title</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" />
 </head>
 <body>
     <header>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <p class="site-title">
-                    @Html.ActionLink("Code Express", "Index", "Home")
-                </p>
-            </div>
-            <div class="float-right">
-                <nav>
-                    <ul id="menu">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="topnav">
+            @Html.ActionLink("Home", "Index", "Home", new { @class = "active" })
+            @Html.ActionLink("About", "About", "Home")
         </div>
     </header>
     <div id="body">
-        @RenderSection("featured", required: false)
-        <section class="content-wrapper main-content clear-fix">
-            @RenderBody()
-        </section>
+        @RenderBody()
     </div>
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>© @DateTime.Now.Year – Code Express</p>
+                <p>© @DateTime.Now.Year</p>
             </div>
         </div>
     </footer>

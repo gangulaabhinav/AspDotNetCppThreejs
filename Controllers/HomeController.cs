@@ -8,7 +8,6 @@ namespace WebApplication2.Controllers
 {
     public class HomeController : Controller
     {
-
         public ActionResult Index()
         {
             return View();
@@ -19,6 +18,11 @@ namespace WebApplication2.Controllers
             ViewBag.Message = "About AspDotNetCppThreejs.";
             return View();
         }
-
+        public ActionResult Cpp()
+        {
+            ViewBag.Title = "About";
+            ViewBag.Message = "About AspDotNetCppThreejs.";
+            return View();
+        }
     }
 }

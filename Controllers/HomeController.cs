@@ -15,6 +15,8 @@ namespace WebApplication2.Controllers
         }
         public ActionResult About()
         {
+            ViewBag.Title = "About";
+            ViewBag.Message = "About AspDotNetCppThreejs.";
             return View();
         }
 

@@ -13,9 +13,9 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
-        public String About()
+        public ActionResult About()
         {
-            return "This is our About us Page";
+            return View();
         }
 
     }

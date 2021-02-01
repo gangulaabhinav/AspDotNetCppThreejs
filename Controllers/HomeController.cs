@@ -12,14 +12,14 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
-        public ActionResult About()
-        {
-            return View();
-        }
         public ActionResult Cpp()
         {
             ViewBag.Title = "About";
             ViewBag.Message = "About AspDotNetCppThreejs.";
+            return View();
+        }
+        public ActionResult About()
+        {
             return View();
         }
     }

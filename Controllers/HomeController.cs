@@ -11,6 +11,8 @@ namespace WebApplication2.Controllers
     {
         [DllImport("CppLibrary.dll")]
         public static extern void Hello();
+        [DllImport("CppLibrary.dll", EntryPoint = "mixed_mode_addition", CallingConvention = CallingConvention.StdCall)]
+        public static extern int Sum(int x, int y);
 
         public ActionResult Index()
         {
@@ -19,8 +21,10 @@ namespace WebApplication2.Controllers
         public ActionResult Cpp()
         {
             ViewBag.Title = "Cpp";
-            ViewBag.Message = "Calling Hello() from CppLibrary.dll";
+            int x = 3;
+            int y = 5;
             Hello();
+            ViewBag.Message = "From C++: " + "Sum(" + x + "+" + y + ")=" + Sum(x, y);
             return View();
         }
         public ActionResult About()

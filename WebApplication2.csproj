@@ -108,6 +108,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Cpp.cshtml" />
+    <Content Include="Views\Home\Three.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

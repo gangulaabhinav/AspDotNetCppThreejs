@@ -27,6 +27,11 @@ namespace WebApplication2.Controllers
             ViewBag.Message = "From C++: " + "Sum(" + x + "+" + y + ")=" + Sum(x, y);
             return View();
         }
+        public ActionResult Three()
+        {
+            ViewBag.Title = "Three";
+            return View();
+        }
         public ActionResult About()
         {
             return View();

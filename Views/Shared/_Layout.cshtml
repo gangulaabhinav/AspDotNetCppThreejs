@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" />
 </head>
 <body>
-    <header>
-        <div class="topnav">
-            @Html.ActionLink("Home", "Index", "Home", new { @class = "active" })
-            @Html.ActionLink("Cpp", "Cpp", "Home")
-            @Html.ActionLink("Three", "Three", "Home")
-            @Html.ActionLink("About", "About", "Home")
-        </div>
-    </header>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "active" })</li>
+        <li>@Html.ActionLink("Cpp", "Cpp", "Home")</li>
+        <li>@Html.ActionLink("Three", "Three", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("?", "About", "Home")</li>
+    </ul>
     <div id="body">
         @RenderBody()
     </div>

@@ -9,9 +9,9 @@ namespace WebApplication2.Controllers
 {
     public class HomeController : Controller
     {
-        [DllImport("../CppLibrary.dll")]
+        [DllImport("CppLibrary.dll")]
         public static extern void Hello();
-        [DllImport("../CppLibrary.dll", EntryPoint = "mixed_mode_addition", CallingConvention = CallingConvention.StdCall)]
+        [DllImport("CppLibrary.dll", EntryPoint = "mixed_mode_addition", CallingConvention = CallingConvention.StdCall)]
         public static extern int Sum(int x, int y);
 
         public ActionResult Index()

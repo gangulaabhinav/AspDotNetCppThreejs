@@ -18,6 +18,10 @@ namespace AspDotNetCppThreejs.Controllers
             ViewBag.Message = "Placeholder for message from Cpp dll call.";
             return View();
         }
+        public ActionResult Three()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();

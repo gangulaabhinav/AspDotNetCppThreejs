@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" />
+    <link rel="stylesheet" href="@Url.Content("Site.css")" />
 </head>
 <body>
     <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "active" })</li>
+        <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
         <li>@Html.ActionLink("About", "About", "Home")</li>
     </ul>
     <div id="body">

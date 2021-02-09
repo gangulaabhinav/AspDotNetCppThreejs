@@ -9,8 +9,8 @@ namespace AspDotNetCppThreejs.Controllers
 {
     public class HomeController : Controller
     {
-        //[DllImport("CppLibrary.dll")]
-        //public static extern void Hello();
+        [DllImport("CppLibrary.dll")]
+        public static extern void Hello();
         public IActionResult Index()
         {
             return View();
@@ -19,7 +19,7 @@ namespace AspDotNetCppThreejs.Controllers
         {
             ViewBag.Title = "Cpp";
             ViewBag.Message = "Calling Hello() from CppLibrary.dll";
-            //Hello();
+            Hello();
             return View();
         }
         public ActionResult Three()

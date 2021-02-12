@@ -17,8 +17,4 @@
     <None Include="wwwroot\Site.css" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="build_cpplibrary.bat" />
-  </Target>
-
 </Project>

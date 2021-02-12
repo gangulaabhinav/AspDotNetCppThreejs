@@ -9,7 +9,7 @@ namespace AspDotNetCppThreejs.Controllers
 {
     public class HomeController : Controller
     {
-        [DllImport("CppLibrary.dll")]
+        [DllImport("wwwroot/CppLibrary.dll")]
         public static extern void Hello();
         public IActionResult Index()
         {

@@ -26,6 +26,10 @@ namespace AspDotNetCppThreejs.Controllers
         {
             return View();
         }
+        public ActionResult CppThreejs()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();

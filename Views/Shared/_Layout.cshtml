@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string[] actions = {"Index", "Cpp", "Three", "CppThreejs", "About"};
+    var currentAction = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,11 +13,17 @@
 </head>
 <body>
     <ul>
-        <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("Cpp", "Cpp", "Home")</li>
-        <li>@Html.ActionLink("Three", "Three", "Home")</li>
-        <li>@Html.ActionLink("CppThreejs", "CppThreejs", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
+        @foreach (var action in actions)
+				    {
+            @if (action == currentAction)
+            {
+                <li class="active">@Html.ActionLink(action, action, "Home")</li>
+            }
+            else
+            {
+                <li>@Html.ActionLink(action, action, "Home")</li>
+            }
+        }
     </ul>
     <div id="body">
         @RenderBody()

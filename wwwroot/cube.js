@@ -19,7 +19,7 @@ scene.add(ambientLight)
 const pointLight = new THREE.PointLight('white', 0.5)
 scene.add(pointLight)
 
-const geometry = new THREE.BoxGeometry(100, 100, 100)
+const geometry = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize)
 const material = new THREE.MeshLambertMaterial({color: 'lightgray'})
 const mesh = new THREE.Mesh(geometry, material)
 mesh.position.set(0, 0, -1000)

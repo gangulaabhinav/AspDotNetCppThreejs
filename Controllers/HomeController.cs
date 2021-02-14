@@ -11,6 +11,8 @@ namespace AspDotNetCppThreejs.Controllers
     {
         [DllImport("wwwroot/CppLibrary.dll")]
         public static extern void Hello();
+        [DllImport("wwwroot/CppLibrary.dll", EntryPoint = "GetCubeSize", CallingConvention = CallingConvention.StdCall)]
+        public static extern int GetCubeSize();
         public IActionResult Index()
         {
             return View();
@@ -28,6 +30,7 @@ namespace AspDotNetCppThreejs.Controllers
         }
         public ActionResult CppThreejs()
         {
+            ViewBag.CubeSize = GetCubeSize();
             return View();
         }
         public IActionResult About()

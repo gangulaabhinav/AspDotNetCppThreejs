@@ -4,6 +4,8 @@
     ViewBag.Title = "CppThreejs";
 }
 <script type="text/javascript">
-    var cubeSize = @Model.size;
+    function getCubeSize() {
+        return @Model.CubeSize()
+    }
 </script>
 <script src="~/cppcube.js" type="module"></script>

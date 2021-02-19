@@ -24,9 +24,15 @@ const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshLambertMaterial({ color: 'lightgray' })
 const mesh = new THREE.Mesh(geometry, material)
 mesh.position.set(0, 0, -1000)
-mesh.scale.x = cubeSize;
-mesh.scale.y = cubeSize;
-mesh.scale.z = cubeSize;
+
+function updateCubeSize() {
+    const size = getCubeSize();
+    mesh.scale.x = size;
+    mesh.scale.y = size;
+    mesh.scale.z = size;
+}
+updateCubeSize()
+
 scene.add(mesh)
 
 // Animate continuously

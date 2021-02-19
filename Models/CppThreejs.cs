@@ -10,6 +10,9 @@ namespace AspDotNetCppThreejs.Models
     {
         [DllImport("wwwroot/CppLibrary.dll", EntryPoint = "GetCubeSize", CallingConvention = CallingConvention.StdCall)]
         public static extern int GetCubeSize();
-        public int size { get; } = GetCubeSize();
+        public int CubeSize()
+        {
+            return GetCubeSize();
+        }
     }
 }

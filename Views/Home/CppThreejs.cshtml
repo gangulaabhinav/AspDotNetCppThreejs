@@ -1,7 +1,9 @@
-﻿@{
+﻿@model AspDotNetCppThreejs.Models.CppThreejs
+
+@{
     ViewBag.Title = "CppThreejs";
 }
 <script type="text/javascript">
-    var cubeSize = @ViewBag.CubeSize;
+    var cubeSize = @Model.size;
 </script>
 <script src="~/cppcube.js" type="module"></script>

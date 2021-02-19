@@ -10,6 +10,7 @@ void Hello()
 extern "C"
 {
     __declspec(dllexport) int __stdcall GetCubeSize() {
-        return 100;
+        static int cubeSize = 100;
+        return cubeSize += 10;
     }
 }
